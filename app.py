@@ -2,10 +2,10 @@ from flask import Flask, render_template, url_for, flash, redirect, request
 from forms import RegistrationForm
 import git
 from flask_behind_proxy import FlaskBehindProxy
-proxied = FlaskBehindProxy(app)
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'c29bcfa698752666def85f68880d22d8'
+proxied = FlaskBehindProxy(app)
 
 @app.route("/")
 @app.route("/home")
